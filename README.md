@@ -1,4 +1,4 @@
-# ⚜️ New Orleans Climate-Aware Activity Recommender
+# New Orleans Climate-Aware Activity Recommender
 
 **Developer:** Hongbo Zhang  
 **Course:** MSBA-692-60-4265 · Pipelines to Insights — Summer 2026  
@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 Business Problem
+## Business Problem
 
 New Orleans attracts millions of visitors each year, yet many fail to account for the city's extreme subtropical climate — intense summer heat, high humidity, frequent thunderstorms, and seasonal hurricane risk from June through November. Poor weather planning leads to missed experiences and reduced tourist engagement with local businesses.
 
@@ -14,7 +14,7 @@ This application solves that problem by combining **real-time 16-day weather for
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### Step 1 — Install Dependencies
 
@@ -47,7 +47,7 @@ http://127.0.0.1:8054
 
 ---
 
-## 🔌 Database Configuration (Supabase PostgreSQL)
+## Database Configuration (Supabase PostgreSQL)
 
 1. Log in at [supabase.com](https://supabase.com)
 2. Go to your project → **Settings** → **Database** → **Connection string (URI)**
@@ -61,7 +61,7 @@ os.environ["POSTGRES_URI"] = "postgresql://postgres:YOUR_PASSWORD@db.YOUR_REF.su
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 | Package | Purpose |
 |---------|---------|
@@ -75,7 +75,7 @@ os.environ["POSTGRES_URI"] = "postgresql://postgres:YOUR_PASSWORD@db.YOUR_REF.su
 
 ---
 
-## 🗄️ Database Schema
+## Database Schema
 
 Hosted on **Supabase PostgreSQL**, using a star schema:
 
@@ -97,28 +97,28 @@ recommendation  ← Activity comfort scores per day
 
 ---
 
-## 📊 Dashboard Features
+## Dashboard Features
 
-### 🎯 Tab 1 — Activity Recommender
+### Tab 1 — Activity Recommender
 - **16-day date selector strip** — click any day to update all panels instantly
 - **Weather conditions panel** — shows High/Low/Rain/Wind/Cloud for selected day
 - **Activity recommendation list** — scored and ranked by comfort algorithm
 - **Category filter dropdown** — filter by Outdoor Sports / Indoor / Events / Seasonal
 - **Photo modal** — click any activity card to view 3 real photos, price range, Google rating, and comfort score with image carousel
 
-### 📊 Tab 2 — Climate Data
+### Tab 2 — Climate Data
 - **6 KPI summary cards** — Avg High/Low Temp, Total Precip, Rainy Days, Avg Wind, Avg Cloud Cover
 - **Temperature slider filter** — show only days where High Temp ≥ threshold (80–100°F)
 - **Condition keyword search** — type "rain", "clear", or "storm" to filter rows
 - **Scrollable data table** — full 16-day readings with frozen header, sortable columns, conditional formatting
 
-### 📈 Tab 3 — Charts
+### Tab 3 — Charts
 - **Temperature range chart** — daily High/Mean/Low with shaded band
 - **Precipitation & rain probability** — dual-axis bar + line chart
 - **Heat Index (Feels Like °F)** — NOAA Rothfusz equation with color-coded danger zones (Comfortable / Caution / Danger / Extreme Danger)
 - **New Orleans landmarks map** — embedded Google Maps showing famous attractions
 
-### 🏆 Tab 4 — Best Days
+### Tab 4 — Best Days
 - **Top activity score chart** — horizontal bar ranked by day, highlights selected date in gold
 - **Outdoor activity availability** — count of viable outdoor options per day
 - **Click to navigate** — clicking a bar jumps to Recommender tab for that date and shows a weather + recommendation detail panel
@@ -126,7 +126,7 @@ recommendation  ← Activity comfort scores per day
 
 ---
 
-## 🧠 Recommendation Algorithm
+## Recommendation Algorithm
 
 Each activity is scored against daily weather using a **differentiated penalty model**:
 
@@ -145,7 +145,7 @@ score = base_score
 
 ---
 
-## 💡 Business Insights
+## Business Insights
 
 1. **June outdoor window is narrow** — only ~6 of 16 days have ≥5 viable outdoor options due to heat and storm risk
 2. **Jazz clubs and museums dominate rainy periods** — indoor activities score 65–75 on high-cloud/high-rain days
@@ -155,7 +155,7 @@ score = base_score
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 NO_Climate_Recommender.ipynb   ← Main notebook: ETL pipeline + Dash application
